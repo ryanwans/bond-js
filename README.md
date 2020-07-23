@@ -12,7 +12,7 @@ BOND.add(
   "/your/template/endpoint.htm",
   "#yourTargetContainer",
   {
-    "priority": 1
+    "priority": 2
   }
 );
 `
@@ -27,3 +27,6 @@ You can incorporate logic to determine what template to grab <br>
 To run the inject sequence, run `BOND.repl()`<br><br>
 To run a function after every event in que has been executed, you would use:<br>
 `BOND.created( function() {console.log("All Templated Have Been Injected!")} )`
+<br><br>
+## How It Works
+Upon bonding a template endpoint to a target element, it adds the bind data to an event que. Once you run the execution, or replace function, it will execute this que with respect to its given priority (if none given, in defined order). The script will draft an XMLHttpRequest to your template endpoint, and grab the HTML, which <b>MUST START WITH A DIV ELEMENT</b> in order for it to register. Once all targets have been grabbed, it will then begin to insert the HTML into its given target element.
