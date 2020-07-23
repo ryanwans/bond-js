@@ -1,7 +1,7 @@
 # bond-js
 Lightweight Frontend Templating
 
-## CDN Resource
+### CDN Resource
 `https://ryanwans.com/dep/bondfile.js`
 
 ## Example Usage
