@@ -17,4 +17,9 @@ BOND.add(
 );
 `
 <br>An Exmaple:<br>
-`BOND.add("/port/nav.htm", "#nav", {priority: 1})`
+`BOND.add("/viewport/nav.htm", "#nav", {priority: 1})`<br><br>
+
+You can incorporate logic to determine what template to grab <br>
+`"/" === window.location.pathname || "" === window.location.pathname` <br>
+&emsp;`? BOND.add("/viewport/home.htm", "#tc", {priority: 0})` <br>
+&emsp;`: (BOND.add("/viewport" + window.location.pathname + ".htm", "#tc", {priority: 0})`<br>
