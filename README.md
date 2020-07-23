@@ -16,3 +16,5 @@ BOND.add(
   }
 );
 `
+<br>An Exmaple:<br>
+`BOND.add("/port/nav.htm", "#nav", {priority: 1})`
