@@ -21,5 +21,9 @@ BOND.add(
 
 You can incorporate logic to determine what template to grab <br>
 `"/" === window.location.pathname || "" === window.location.pathname` <br>
-&emsp;`? BOND.add("/viewport/home.htm", "#tc", {priority: 0})` <br>
-&emsp;`: (BOND.add("/viewport" + window.location.pathname + ".htm", "#tc", {priority: 0})`<br>
+&emsp;&emsp;`? BOND.add("/viewport/home.htm", "#tc", {priority: 0})` <br>
+&emsp;&emsp;`: (BOND.add("/viewport" + window.location.pathname + ".htm", "#tc", {priority: 0})`<br>
+<br><br>
+To run the inject sequence, run `BOND.repl()`<br><br>
+To run a function after every event in que has been executed, you would use:<br>
+`BOND.created( function() {console.log("All Templated Have Been Injected!")} )`
